@@ -20,15 +20,17 @@ body {
 .ship {
     display: flex;
     gap: 1rem;
-}
-
-.ship + .ship {
-    margin-top: 2rem;
+    align-items: flex-end;
+    margin-top: 2rem
 }
 
 .ship__title {
     font-weight: 700;
     font-size: 1.2rem;
+}
+
+.form {
+    margin-top: 2rem;
 }
 
 .label {
@@ -39,12 +41,17 @@ body {
     text-transform: uppercase;
 }
 
-.button, .input {
+.button, .input, .textarea, select {
     border-radius: 5px;
-    border: 2px solid;
+    border: none;
+    outline: 2px solid #000;
     background-color: #fff;
     font-size: 1.2rem;
     padding: 0.5rem;
+}
+
+.button:focus, .input:focus, .textarea:focus, .select:focus {
+    outline: 3px solid #614BC3;
 }
 
 .button--submit {
@@ -53,6 +60,29 @@ body {
     background-color: #E4F1FF;
 }
 
+.input-container {
+    margin-top: 1.2rem;
+}
+
 .input {
     width: 100%;
+}
+
+.textarea {
+    width: 100%;
+    resize: none;
+    height: 20rem;
+}
+
+.alert {
+    font-weight: 700;
+
+    padding: 1rem;
+    margin-top: 2rem;
+
+    border-radius: 12px;
+}
+
+.alert--success {
+    background-color: #A8DF8E;
 }

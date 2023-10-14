@@ -10,6 +10,6 @@ class ShipView
 {
     public function getShips()
     {
-        return Ship::where("state", 1)->get();
+        return Ship::orderBy('ordering')->get();
     }
 }

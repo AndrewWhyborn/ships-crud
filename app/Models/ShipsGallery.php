@@ -9,5 +9,6 @@ class ShipsGallery extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
     protected $table = 'ships_gallery';
 }
