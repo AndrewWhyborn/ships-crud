@@ -3,6 +3,7 @@
 
 @section('content')
     <h1>Редактирование лайнера</h1>
+
     <div class="back">
         <a href="{{route("ships.index")}}">К списку лайнеров</a>
     </div>
@@ -24,16 +25,15 @@
 
         <div class="input-container">
             <label for="description" class="label">Описание</label>
-{{--            {!! $ship->description !!}--}}
             <textarea id="description" name="description" required
                       class="textarea">{!! $ship->description !!}</textarea>
         </div>
 
-        @foreach($ship->specs() as $index => $spec)
+        @foreach($ship->spec as $index => $spec)
             <div class="input-container">
-                <label for="specValue[{{$index}}]" class="label">{{$spec->name}}</label>
-                <input type="hidden" name="specName[{{$index}}]" value="{{$spec->name}}">
-                <input id="specValue[{{$index}}]" type="text" name="specValue[{{$index}}]" required value="{{$spec->value}}" class="input">
+                <label for="specValue[{{$index}}]" class="label">{{$spec['name']}}</label>
+                <input type="hidden" name="specName[{{$index}}]" value="{{$spec['name']}}">
+                <input id="specValue[{{$index}}]" type="text" name="specValue[{{$index}}]" required value="{{$spec['value']}}" class="input">
             </div>
         @endforeach
 
@@ -56,10 +56,4 @@
 
     @include("ships/components/shipImages")
     @include("ships/components/shipCabinCategories")
-@endsection
-
-@section('scripts')
-    <script>
-
-    </script>
 @endsection

@@ -23,8 +23,7 @@ class Ship extends Model
         return $this->hasMany(ShipsGallery::class)->orderBy("ordering");
     }
 
-    public function specs()
-    {
-        return json_decode($this->spec);
-    }
+    protected $casts = [
+        'spec' => 'array'
+    ];
 }

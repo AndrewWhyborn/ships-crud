@@ -11,7 +11,7 @@ body {
 .container {
     width: 100%;
     min-width: 360px;
-    max-width: 768px;
+    max-width: 1000px;
 
     margin: 0 auto;
     padding: 0 1rem;
@@ -24,7 +24,7 @@ body {
     margin-top: 2rem
 }
 
-.ship__title {
+.ship__title, .category__title {
     font-weight: 700;
     font-size: 1.1rem;
 }
@@ -84,9 +84,14 @@ body {
 .gallery__link {
     display: inline-block;
     overflow: hidden;
-    width: 170px;
-    height: 170px;
+    width: 180px;
+    height: 180px;
     border-radius: 10px;
+}
+
+.gallery__link--big {
+    width: 100%;
+    height: auto;
 }
 
 .gallery__img {
@@ -117,5 +122,19 @@ body {
 
 .alert--success {
     background-color: #A8DF8E;
+}
+
+.category {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.category__header {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
