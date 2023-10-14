@@ -25,6 +25,6 @@ class ShipController extends Controller
     {
         $shipServices->updateShip($ship, $request);
         session()->flash('message', "Лайнер {$ship->title} обновлен");
-        return redirect(route("ships.index"));
+        return redirect(route("ships.edit", ["ship" => $ship]));
     }
 }

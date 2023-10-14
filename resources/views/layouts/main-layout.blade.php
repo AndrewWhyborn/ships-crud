@@ -14,6 +14,9 @@
 
     <link rel="icon" href="favicon.png">
 
+    <link rel="stylesheet" href="{{ asset('/css/libs/fancybox.min.css') }}">
+    <script type="text/javascript" src="{{ asset('/js/libs/jquery-3.7.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/js/libs/fancybox.min.js') }}"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>

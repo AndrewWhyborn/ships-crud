@@ -7,6 +7,12 @@
         <a href="{{route("ships.index")}}">К списку лайнеров</a>
     </div>
 
+    @if (session()->has('message'))
+        <div class="alert alert--success">
+            {{ session('message') }}
+        </div>
+    @endif
+
     <form method="post" action="{{route("ships.update", ["ship" => $ship])}}" class="form">
         @method("PUT")
         @csrf
@@ -18,6 +24,7 @@
 
         <div class="input-container">
             <label for="description" class="label">Описание</label>
+{{--            {!! $ship->description !!}--}}
             <textarea id="description" name="description" required
                       class="textarea">{!! $ship->description !!}</textarea>
         </div>
@@ -44,9 +51,11 @@
             </select>
         </div>
 
-
-        <button type="submit" class="button button--submit">Сохранить</button>
+        <button type="submit" class="button button--submit">Сохранить описание и характеристики</button>
     </form>
+
+    @include("ships/components/shipImages")
+    @include("ships/components/shipCabinCategories")
 @endsection
 
 @section('scripts')
