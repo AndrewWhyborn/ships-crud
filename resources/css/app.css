@@ -1,16 +1,58 @@
-*{
+* {
     box-sizing: border-box;
 }
 
 body {
     font-size: 16px;
     font-family: "Arial", sans-serif;
+    background-color: #F0F0F0;
 }
 
 .container {
     width: 100%;
+    min-width: 360px;
     max-width: 768px;
 
     margin: 0 auto;
     padding: 0 1rem;
+}
+
+.ship {
+    display: flex;
+    gap: 1rem;
+}
+
+.ship + .ship {
+    margin-top: 2rem;
+}
+
+.ship__title {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.button, .input {
+    border-radius: 5px;
+    border: 2px solid;
+    background-color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+.button--submit {
+    margin-top: 2rem;
+    cursor: pointer;
+    background-color: #E4F1FF;
+}
+
+.input {
+    width: 100%;
 }
