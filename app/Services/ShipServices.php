@@ -25,7 +25,7 @@ class ShipServices
 
         $ship->update([
             "title" => $request->input("title"),
-            "spec" => json_encode($spec),
+            "spec" => $spec,
             "description" => $request->input("description"),
             "ordering" => $request->input("ordering"),
             "state" => $request->input("state"),
