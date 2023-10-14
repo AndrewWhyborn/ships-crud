@@ -26,11 +26,11 @@ body {
 
 .ship__title {
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .form {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .label {
@@ -44,14 +44,14 @@ body {
 .button, .input, .textarea, select {
     border-radius: 5px;
     border: none;
-    outline: 2px solid #000;
     background-color: #fff;
-    font-size: 1.2rem;
-    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: "Arial", sans-serif;
+    padding: 0.4rem;
 }
 
 .button:focus, .input:focus, .textarea:focus, .select:focus {
-    outline: 3px solid #614BC3;
+    outline: 2px solid #000;
 }
 
 .button--submit {
@@ -59,6 +59,8 @@ body {
     cursor: pointer;
     background-color: #f7c52a;
     font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.4rem;
 }
 
 .input-container {
@@ -85,7 +87,6 @@ body {
     width: 170px;
     height: 170px;
     border-radius: 10px;
-    outline: 3px solid #000;
 }
 
 .gallery__img {
@@ -102,7 +103,7 @@ body {
 .textarea {
     width: 100%;
     resize: none;
-    height: 20rem;
+    height: 10rem;
 }
 
 .alert {
@@ -117,3 +118,4 @@ body {
 .alert--success {
     background-color: #A8DF8E;
 }
+

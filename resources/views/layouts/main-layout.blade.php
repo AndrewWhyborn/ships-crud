@@ -12,8 +12,6 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="icon" href="favicon.png">
-
     <link rel="stylesheet" href="{{ asset('/css/libs/fancybox.min.css') }}">
     <script type="text/javascript" src="{{ asset('/js/libs/jquery-3.7.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('/js/libs/fancybox.min.js') }}"></script>
